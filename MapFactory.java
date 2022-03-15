@@ -17,7 +17,7 @@ public class MapFactory<K,V>
  * @param entry
  * @return
  */
-public Map<K,V> returnMap(String entry) {
+public Map<K, V> returnMap(String entry) {
    //Seleccion de la implementacion
 	if (entry.equalsIgnoreCase("HM"))
       return this.MyMap = new HashMap<K,V>(); //Devuelve HashMap
