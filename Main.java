@@ -59,7 +59,7 @@ public class Main {
             System.out.println("Ingrese la acción a realizar. \nACCIONES DEL USUARIO \n1. Agregar una carta a la colección" +
                     "\n2. Mostrar el tipo de una carta \n3. Mostrar nombre, tipo y cantidad de cartas" +
                     "\n4. Mostrar nombre, tipo y cantidad de cartas ordenadas por tipo" +
-                    "\nOPCIONES GLOBALES \n5. Mostrar cartas existentes \n6. Mostrar cartas ordenadas por tipo \n7. Salir");
+                    "\nOPCIONES GLOBALES \n5. Mostrar cartas existentes \n6. Mostrar cartas ordenadas por tipo \n7. Salir \n8.Medir tiempos");
             option = Integer.parseInt(getNumber(keyboard));
 
             switch (option) {
@@ -143,8 +143,21 @@ public class Main {
                 case 7:
                     exit = false;
                     break;
+                case 8:
+                    String s="";
+                    long tiempo = 0;
+                    for(int i=0;i<20;i++);{
+                        long t1 = System.nanoTime();
+                        for (String cardString: cards.keySet()){
+                            cards.get(cardString);
+                        }
+                    }
+                    s=tiempo/20+"";   
+                    System.out.println(s);  
+                    
+                break;
                 default:
-                    System.out.println("La opción ingresadad no está definida.");
+                    System.out.println("La opción ingresada no está definida.");
             }
         }
         System.exit(0);
